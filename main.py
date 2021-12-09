@@ -17,7 +17,7 @@ if __name__ == '__main__':
     else:
         username= input("Введите имя пользователя vk:")
         owner_id = None
-    token_y = 'AQAAAABA69TUAADLW4nk5wAHSUY4plkFEgbGWh4' #input("Введите токен с Полигона Яндекс.Диска:")
+    token_y = #input("Введите токен с Полигона Яндекс.Диска:")
     folder_name = input("Введите имя папки для скачивания:")
     count_photo = int(input("Введите кол-во фотографий:"))
     vk_client = VkUser(token_vk, '5.131')
