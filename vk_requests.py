@@ -13,17 +13,20 @@ class VkUser:
             'v': version    
         }
 
-    def get_photos(self, owner_id=None):
+    def get_photos(self, owner_id=None, username=None):
+    
         photos_url = self.url + 'photos.get'
         photos_params = {
             'owner_id': owner_id,
+            'username': username,
             'album_id': 'profile',
             'extended':1
         }
         res = requests.get(photos_url, params={**self.params, **photos_params}).json()
         return res['response']["items"]
 
-    def get_max_size_photo(self, photos, count_photo=5):
+
+    def get_max_size_photo(self, photos, count_photo):
         #создаем объектам-фото дополнительное значение - размер
         size_photo = {} 
         for photo in photos:
@@ -50,6 +53,7 @@ class VkUser:
                 max_size_photo[key] = value
             count += 1
         
+        # pprint(max_size_photo)
         return max_size_photo
 
 
