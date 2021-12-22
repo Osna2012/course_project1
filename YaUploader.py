@@ -8,6 +8,7 @@ class YaUploader:
     def __init__(self,token_y: str):
         self.token_y = token_y
 
+
     def upload(self, photo_for_load, folder_name, count_photo):
         API_BASE_URL = "https://cloud-api.yandex.net/"
 
